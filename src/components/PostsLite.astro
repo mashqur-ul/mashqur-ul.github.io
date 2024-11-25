@@ -1,0 +1,28 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content'
+import DateFormat from '@components/DateFormat.astro'
+
+const { slug } = Astro.props
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .filter((post: CollectionEntry<'blog'>) => post.slug != slug)
+---
+
+<br />
+<br />
+<h3>PostsLite</h3>
+<ul>
+  {
+    posts.map((post) => (
+      <li>
+        <a href={`/blog/${post.slug}/`}>
+          <p>
+            <DateFormat date={post.data.pubDate} />
+          </p>
+          <h4>{post.data.title}</h4>
+        </a>
+      </li>
+    ))
+  }
+</ul>

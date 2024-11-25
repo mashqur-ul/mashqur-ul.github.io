@@ -2,30 +2,11 @@
 import Header from '@components/Header.astro'
 import AppLayout from '@layout/AppLayout.astro'
 import Footer from '@components/Footer.astro'
-import { getCollection } from 'astro:content'
-import DateFormat from '@components/DateFormat.astro'
-
-// const posts = await getCollection('blog')
-const posts = (await getCollection('blog')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-)
+import Posts from '@components/Posts.astro'
 ---
 
 <AppLayout title="Blog" description="Lorem blog dolor sit" image="">
   <Header />
-  <h1>Blog</h1>
-  <ul>
-    {
-      posts.map((post) => (
-        <li>
-          <a href={`/blog/${post.slug}`}>
-            {/* <img width={720} height={360} src={post.data.heroImage} alt="" /> */}
-            <h4>{post.data.title}</h4>
-            <DateFormat date={post.data.pubDate} />
-          </a>
-        </li>
-      ))
-    }
-  </ul>
+  <Posts />
   <Footer />
 </AppLayout>

@@ -1,5 +1,6 @@
 ---
 import DateFormat from '@components/DateFormat.astro'
+import AppLayout from '@layout/AppLayout.astro'
 import { type CollectionEntry, getCollection } from 'astro:content'
 
 export async function getStaticPaths() {
@@ -15,9 +16,11 @@ const post = Astro.props
 const { Content } = await post.render()
 ---
 
-<h1>{post.data.title}</h1>
-<DateFormat date={post.data.pubDate} />
-<br />
-<br />
-<h2>Markdown here</h2>
-<!-- <Content /> -->
+<AppLayout>
+  <h1>{post.data.title}</h1>
+  <DateFormat date={post.data.pubDate} />
+  <br />
+  <br />
+  <h2>Markdown here</h2>
+  <!-- <Content /> -->
+</AppLayout>

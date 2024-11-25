@@ -1,0 +1,23 @@
+---
+import DateFormat from '@components/DateFormat.astro'
+import { type CollectionEntry, getCollection } from 'astro:content'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog')
+  return posts.map((post: { slug: any }) => ({
+    params: { slug: post.slug },
+    props: post,
+  }))
+}
+type Props = CollectionEntry<'blog'>
+
+const post = Astro.props
+const { Content } = await post.render()
+---
+
+<h1>{post.data.title}</h1>
+<DateFormat date={post.data.pubDate} />
+<br />
+<br />
+<h2>Markdown here</h2>
+<!-- <Content /> -->

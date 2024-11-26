@@ -1,23 +1,23 @@
 ---
+import '@styles/components/Posts.sass'
 import { getCollection, type CollectionEntry } from 'astro:content'
 import DateFormat from '@components/DateFormat.astro'
-import AppLayout from '@layout/AppLayout.astro'
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 )
 ---
 
-<h1>Posts</h1>
-<ul>
+<!-- <h1>Posts</h1> -->
+<ul class="Posts">
   {
     posts.map((post) => (
-      <li>
-        <a href={`/blog/${post.slug}`}>
-          <p>
+      <li class="Posts__list">
+        <a class="Posts__link" href={`/blog/${post.slug}`}>
+          <p class="Posts__time">
             <DateFormat date={post.data.pubDate} />
           </p>
-          <h4>{post.data.title}</h4>
+          <h2>{post.data.title}</h2>
         </a>
       </li>
     ))

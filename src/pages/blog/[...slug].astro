@@ -23,7 +23,7 @@ const { Content } = await post.render()
   description={post.data.description}
   image={post.data.heroImage}
 >
-  <Link href="/blog">All Blog</Link>
+  <Link href="/">Back to home</Link>
   <h1>{post.data.title}</h1>
   <DateFormat date={post.data.pubDate} />
   <br />

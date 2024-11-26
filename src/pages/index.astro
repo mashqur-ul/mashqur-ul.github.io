@@ -6,11 +6,10 @@ import MainContent from '@components/MainContent.astro'
 ---
 
 <AppLayout title="Home" description="Lorem index dolor sit" image="">
-  <!-- <Header /> -->
-  <header class="header">Header</header>
+  <Header />
   <div class="hero">
-    <p class="kicker">Senior Software Engineer / Full Stack Developer</p>
-    <h1 class="heading">Non-CSE Background, Code, Curiosity, and Words.</h1>
+    <p>Senior Software Engineer / Full Stack Developer</p>
+    <h1>Non-CSE Background, Code, Curiosity, and Words.</h1>
   </div>
   <main class="main">
     <MainContent />
@@ -20,60 +19,29 @@ import MainContent from '@components/MainContent.astro'
 
 <style lang="sass">
   @import "@styles/_config.sass"
-  .header
-    padding-left: percentage(50px/$frame)*3
-    padding-right: percentage(50px/$frame)*3
-    padding-top: percentage(40px/$frame)*3
-    +desktop
-      position: fixed
-      top: 0
-      left: 0
-      width: 60%
-      padding-left: percentage(50px/$frame)
-      padding-right: percentage(50px/$frame)
-      padding-top: percentage(40px/$frame)
   .hero
-    padding-left: percentage(50px/$frame)*3
-    padding-right: percentage(50px/$frame)*3
-    padding-bottom: percentage(60px/$frame)*3
-    padding-top: 40vh
+    // padding-left: percentage(50px/$frame)*3
+    // padding-right: percentage(50px/$frame)*3
+    // padding-bottom: percentage(60px/$frame)*3
+    // padding-top: 40vh
     +desktop
-      position: fixed
-      bottom: 0
-      left: 0
-      width: 60%
-      padding-left: percentage(50px/$frame)
-      padding-right: percentage(80px/$frame)
-      padding-bottom: percentage(60px/$frame)
+      // position: fixed
+      // bottom: 0
+      // left: 0
+      // width: 60%
+      // padding-left: percentage(50px/$frame)
+      // padding-right: percentage(80px/$frame)
+      // padding-bottom: percentage(60px/$frame)
   .main
-    position: relative
-    background-color: #000C0B
-    color: #ffffff
-    padding-left: percentage(50px/$frame)*3
-    padding-right: percentage(50px/$frame)*3
+    // position: relative
+    // background-color: #000C0B
+    // color: #ffffff
+    // padding-left: percentage(50px/$frame)*3
+    // padding-right: percentage(50px/$frame)*3
     +desktop
-      width: 40%
-      margin-left: 60%
-      padding-left: percentage(60px/$frame)
-      padding-right: percentage(60px/$frame)
-      min-height: 100vh
-
-  // Typography
-  .heading
-    +ffs(46*1.25, 24)
-    letter-spacing: -0.03em
-    line-height: 1.1
-    color: $primary
-    font-weight: 600
-    +desktop
-      +ffs(46, 10)
-
-  .kicker
-    +ffs(22, 14)
-    letter-spacing: -0.03em
-    line-height: 1.1
-    margin-bottom: 1em
-    color: $text
-    +desktop
-      +ffs(20, 5)
+      // width: 40%
+      // margin-left: 60%
+      // padding-left: percentage(60px/$frame)
+      // padding-right: percentage(60px/$frame)
+      // min-height: 100vh
 </style>

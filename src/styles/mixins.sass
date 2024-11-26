@@ -1,0 +1,21 @@
+@use 'sass:math'
+
+=clearfix
+  &:before,
+  &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+
+// Breakpoint
+=desktop
+  @media screen and (min-width: $desktop)
+    @content
+
+// Typography
+@function strip-unit($value)
+  @return math.div($value, ($value * 0 + 1))
+
+=ffs($fs-max, $fs-min, $w-max: strip-unit($max-frame), $w-min: strip-unit($min-frame))
+  font-size: calc(($fs-max - $fs-min) * 100vw / ($w-max - $w-min) + (($fs-min * .1em) - ($fs-max - $fs-min) * ($w-min * .1em) / ($w-max - $w-min)))

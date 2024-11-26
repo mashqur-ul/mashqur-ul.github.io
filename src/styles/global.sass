@@ -2,105 +2,109 @@
 
 @import "_config"
 @import "fonts"
-@import "minireset"
+
+*
+  &,
+  &::before,
+  &::after
+    box-sizing: inherit
 
 html
-  height: 100%
+  box-sizing: border-box
   -webkit-text-size-adjust: 100%
   -ms-text-size-adjust: 100%
   font-size: 16px
+  height: 100%
 
 body
-  // background-color: #0d1117
-  // color: #f0f6fc
-  font-family: MontaguSlab16pt
-  font-weight: 400
   min-height: 100%
   font-size: 62.5%
+  font-family: $family-serif
+  font-weight: 400
+  line-height: $plh
 
-nav
-  display: flex
-  align-items: center
-  gap: 10px
-  margin: 1em 0
+html,
+body,
+// ol,
+// ul,
+// li,
+// dl,
+// dt,
+// dd,
+// blockquote,
+// figure,
+// fieldset,
+// legend,
+// textarea,
+// pre,
+// iframe,
+// hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  margin: 0
+  padding: 0
 
-a
-  display: inline-block
-  text-decoration: none
-  color: inherit
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family: $family-serif
+  line-height: $hlh
+  font-size: 100%
+  font-weight: normal
 
-a.active
-  /* font-weight: bolder; */
-  text-decoration: underline
+p
+  line-height: $plh
 
-ul
-  margin: 2em 0 2em
-  padding-left: 1.3em
-  list-style-position: outside
-  li
-    margin: 0
-    padding: 0.4em 0
-    a
-      display: flex
-      gap: 10px
+// img,
+// audio,
+// video
+//   height: auto
+//   max-width: 100%
+//   display: block
+//   margin-left: auto
+//   margin-right: auto
 
-.header
-  padding-left: percentage(50px/$frame)*3
-  padding-right: percentage(50px/$frame)*3
-  padding-top: percentage(40px/$frame)*3
-  +desktop
-    position: fixed
-    top: 0
-    left: 0
-    width: 60%
-    padding-left: percentage(50px/$frame)
-    padding-right: percentage(50px/$frame)
-    padding-top: percentage(40px/$frame)
-.hero
-  padding-left: percentage(50px/$frame)*3
-  padding-right: percentage(50px/$frame)*3
-  padding-bottom: percentage(60px/$frame)*3
-  padding-top: 40vh
-  +desktop
-    position: fixed
-    bottom: 0
-    left: 0
-    width: 60%
-    padding-left: percentage(50px/$frame)
-    padding-right: percentage(80px/$frame)
-    padding-bottom: percentage(60px/$frame)
-.main
-  position: relative
-  background-color: #000C0B
-  color: #ffffff
-  padding-left: percentage(50px/$frame)*3
-  padding-right: percentage(50px/$frame)*3
-  +desktop
-    width: 40%
-    margin-left: 60%
-    padding-left: percentage(60px/$frame)
-    padding-right: percentage(60px/$frame)
-    // padding: 60px
-  .box
-    height: 1000px
-    background-color: rgba(white, 0.2)
-    margin: 2em 0
+// iframe
+//   border: 0
 
-// Typography
-.heading
-  +ffs(46*1.25, 24)
-  letter-spacing: -0.03em
-  line-height: 1.1
-  color: $primary
-  font-weight: 600
-  +desktop
-    +ffs(46, 10)
+// table
+//   border-collapse: collapse
+//   border-spacing: 0
 
-.kicker
-  +ffs(22, 14)
-  letter-spacing: -0.03em
-  line-height: 1.1
-  margin-bottom: 1em
-  color: $text
-  +desktop
-    +ffs(20, 5)
+// td,
+// th
+//   padding: 0
+//   text-align: left
+
+// nav
+//   display: flex
+//   align-items: center
+//   gap: 10px
+//   margin: 1em 0
+
+// a
+//   display: inline-block
+//   text-decoration: none
+//   color: inherit
+
+// a.active
+//   /* font-weight: bolder; */
+//   text-decoration: underline
+
+// ul
+//   margin: 2em 0 2em
+//   padding-left: 1.3em
+//   list-style-position: outside
+//   li
+//     margin: 0
+//     padding: 0.4em 0
+//     a
+//       display: flex
+//       gap: 10px

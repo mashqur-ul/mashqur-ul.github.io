@@ -1,0 +1,23 @@
+---
+import s from './Aside.module.sass'
+import Certifications from '@components/certifications/Certifications.astro'
+import Work from '@components/work/Work.astro'
+import Writing from '@components/writing/Writing.astro'
+---
+
+<aside class={s.aside}>
+  <div class="tile">
+    <h4>Writing</h4>
+    <Writing />
+  </div>
+
+  <div class="tile">
+    <h4>Certifications</h4>
+    <Certifications />
+  </div>
+
+  <div class="tile">
+    <h4>Work</h4>
+    <Work />
+  </div>
+</aside>

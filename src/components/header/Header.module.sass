@@ -1,0 +1,83 @@
+@import "@styles/_config"
+
+.header
+  background-color: rgba(blue, 0.1)
+  nav
+    display: flex
+    gap: 1em
+    justify-items: center
+    // font-size: 1.4em
+    color: $primary
+    font-weight: 400
+    letter-spacing: 0.02em
+    font-family: $family-serif
+    a
+      text-decoration: none
+    :global(.active)
+      text-decoration: underline
+
+.container
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+
+.logo
+  +reset-anchor
+  // font-size: 14px
+  // color: $primary
+  // font-weight: 400
+  // letter-spacing: 0.02em
+  // font-family: $family-serif
+
+.avatar
+  +reset-anchor
+  width: 60px
+  height: 100px
+  background-color: rgba(black, 0.1)
+  border-radius: 50%
+
+// .Header
+//   border: 1px solid red
+//   // padding-left: percentage(20px/$min-frame)
+//   // padding-right: percentage(20px/$min-frame)
+//   // padding-top: percentage(30px/$min-frame)
+//   // padding-left: percentage(50px/$frame)*3
+//   // padding-right: percentage(50px/$frame)*3
+//   // padding-top: percentage(40px/$frame)
+//   +desktop
+//     // position: fixed
+//     // top: 0
+//     // left: 0
+//     // width: 60%
+//     // padding-left: percentage(50px/$frame)
+//     // padding-right: percentage(50px/$frame)
+//     // padding-top: percentage(40px/$frame)
+//   &--full
+//     // background-color: rgba(red, 0.1)
+//     +desktop
+//       // position: relative
+//       // width: 100%
+//       // padding-left: percentage(50px/$frame)*3
+//       // padding-right: percentage(50px/$frame)*3
+//       // padding-top: percentage(40px/$frame)
+//   &__container
+//     display: flex
+//     justify-content: space-between
+//     // max-width: $desktop
+//     // margin-left: auto
+//     // margin-right: auto
+//     // border: 1px solid red
+
+//   &__logo
+//     +reset-anchor
+//     font-size: 14px
+//     color: $primary
+//     font-weight: 400
+//     letter-spacing: 0.02em
+//     // margin-top: 1.4em
+//   &__avatar
+//     +reset-anchor
+//     width: 60px
+//     height: 100px
+//     background-color: rgba(black, 0.1)
+//     border-radius: 50%

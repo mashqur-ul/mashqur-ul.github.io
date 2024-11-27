@@ -1,4 +1,5 @@
 ---
+import s from './Writing.module.sass'
 import { getCollection, type CollectionEntry } from 'astro:content'
 import DateFormat from '@components/DateFormat.astro'
 
@@ -11,16 +12,14 @@ const posts = (await getCollection('blog'))
 
 <br />
 <br />
-<h3>PostsLite</h3>
-<ul>
+<h3>Read more</h3>
+<ul class={s.writing}>
   {
     posts.map((post) => (
       <li>
         <a href={`/blog/${post.slug}/`}>
-          <p>
-            <DateFormat date={post.data.pubDate} />
-          </p>
-          <h4>{post.data.title}</h4>
+          <DateFormat date={post.data.pubDate} />
+          <h3>{post.data.title}</h3>
         </a>
       </li>
     ))

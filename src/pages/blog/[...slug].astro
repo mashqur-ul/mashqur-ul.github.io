@@ -1,8 +1,6 @@
 ---
 import DateFormat from '@components/DateFormat.astro'
-import Header from '@components/Header.astro'
-import Link from '@components/Link.astro'
-import PostsLite from '@components/PostsLite.astro'
+import ReadMore from '@components/writing/ReadMore.astro'
 import AppLayout from '@layout/app-layout/AppLayout.astro'
 import { type CollectionEntry, getCollection } from 'astro:content'
 
@@ -24,13 +22,8 @@ const { Content } = await post.render()
   description={post.data.description}
   image={post.data.heroImage}
 >
-  <Header full />
-  <main class="Post">
-    <div class="container">
-      <h1>{post.data.title}</h1>
-      <DateFormat date={post.data.pubDate} />
-      <Content />
-      <PostsLite slug={post.slug} />
-    </div>
-  </main>
+  <h1>{post.data.title}</h1>
+  <DateFormat date={post.data.pubDate} />
+  <Content />
+  <ReadMore slug={post.slug} />
 </AppLayout>

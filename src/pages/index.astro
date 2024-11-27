@@ -1,45 +1,10 @@
 ---
-import Header from '@components/Header.astro'
 import AppLayout from '@layout/app-layout/AppLayout.astro'
-import Footer from '@components/Footer.astro'
-import MainContent from '@components/MainContent.astro'
+import Aside from '@components/aside/Aside.astro'
 ---
 
 <AppLayout title="Home" description="Lorem index dolor sit" image="">
-  <Header />
-  <main class="main">
-    <p>Senior Software Engineer / Full Stack Developer</p>
-    <h1>Non-CSE Background, Code, Curiosity, and Words.</h1>
-    <MainContent />
-  </main>
-  <!-- <Footer /> -->
+  <p>Senior Software Engineer / Full Stack Developer</p>
+  <h1>Non-CSE Background, Code, Curiosity, and Words.</h1>
+  <Aside />
 </AppLayout>
-
-<style lang="sass">
-  @import "@styles/_config.sass"
-  .hero
-    // padding-left: percentage(50px/$frame)*3
-    // padding-right: percentage(50px/$frame)*3
-    // padding-bottom: percentage(60px/$frame)*3
-    // padding-top: 40vh
-    +desktop
-      // position: fixed
-      // bottom: 0
-      // left: 0
-      // width: 60%
-      // padding-left: percentage(50px/$frame)
-      // padding-right: percentage(80px/$frame)
-      // padding-bottom: percentage(60px/$frame)
-  .main
-    // position: relative
-    // background-color: #000C0B
-    // color: #ffffff
-    // padding-left: percentage(50px/$frame)*3
-    // padding-right: percentage(50px/$frame)*3
-    +desktop
-      // width: 40%
-      // margin-left: 60%
-      // padding-left: percentage(60px/$frame)
-      // padding-right: percentage(60px/$frame)
-      // min-height: 100vh
-</style>

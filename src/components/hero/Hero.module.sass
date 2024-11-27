@@ -1,3 +1,25 @@
 @import "@styles/_config"
 
 .hero
+  padding-bottom: 3.5em
+  padding-top: 40vh
+  +desktop
+    padding-top: 0
+  h1,
+  h2
+    +reset-all
+  h2
+    font-size: 1em
+    margin-bottom: 1em
+    font-weight: 300
+  h1
+    color: $primary
+
+  nav
+    margin-top: 2em
+    font-size: .75em
+    font-family: $family-serif
+    display: flex
+    gap: 2em
+    a
+      color: $primary

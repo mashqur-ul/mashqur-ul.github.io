@@ -1,76 +1,21 @@
 ---
 import '@styles/components/MainContent.sass'
-import Posts from './Posts.astro'
+import Writing from './writing/Writing.astro'
+import Certifications from './certifications/Certifications.astro'
+import Work from './work/Work.astro'
 ---
 
-<div class="Content">
-  <h3 class="Content__label">Writing</h3>
-  <Posts />
+<div class="tile">
+  <h4>Writing</h4>
+  <Writing />
 </div>
 
-<div class="Content">
-  <h3 class="Content__label">Certifications</h3>
-  <div class="Content__item">
-    <div class="Content__thumb"></div>
-    <h3>Certified Laravel Developer</h3>
-    <p>
-      Issue: 01/12/2020<br />
-      Expire: Unknown
-    </p>
-  </div>
-  <div class="Content__item">
-    <div class="Content__thumb"></div>
-    <h3>Certified Scrum Developer®</h3>
-    <p>
-      Issue: 08/21/2021<br />
-      Expire: 11/09/2025
-    </p>
-  </div>
-  <div class="Content__item">
-    <div class="Content__thumb"></div>
-    <h3>Certified ScrumMaster®</h3>
-    <p>
-      Issue: 01/24/2021<br />
-      Expire: 11/09/2025
-    </p>
-  </div>
+<div class="tile">
+  <h4>Certifications</h4>
+  <Certifications />
 </div>
 
-<div class="Content">
-  <h3 class="Content__label">Work</h3>
-  <div class="Content__item">
-    <p>Now – EastNetic</p>
-    <h2>Sr. Software Engineer</h2>
-  </div>
-  <div class="Content__item">
-    <p>Inside – Deligram</p>
-    <h2>My Journey from Intern to Sr. SE at Deligram</h2>
-    <ul>
-      <li>As a Intern, learned APIs and contribute into projects.</li>
-      <li>As a Jr. SE, developed APIs, & built backend.</li>
-      <li>As a SE, designed architectures and managed servers.</li>
-      <li>As a Sr. SE, led teams, managed CI/CD, and deploy.</li>
-    </ul>
-  </div>
-  <div class="Content__item">
-    <p>Inside – Triangle Services Limited</p>
-    <h2>Software Engineer</h2>
-  </div>
-  <div class="Content__item">
-    <p>Inside – TalhaTraining</p>
-    <h2>Lorem ipsum is simply dum text of the printing</h2>
-  </div>
-</div>
-
-<div class="Content">
-  <h3 class="Content__label">Reading</h3>
-  <div class="Content__item">1</div>
-  <div class="Content__item">2</div>
-</div>
-
-<div class="Content">
-  <h3 class="Content__label">Resource</h3>
-  <div class="Content__item">1</div>
-  <div class="Content__item">2</div>
-  <div class="Content__item">3</div>
+<div class="tile">
+  <h4>Work</h4>
+  <Work />
 </div>

@@ -1,17 +1,15 @@
 ---
 import Header from '@components/Header.astro'
-import AppLayout from '@layout/AppLayout.astro'
+import AppLayout from '@layout/app-layout/AppLayout.astro'
 import Footer from '@components/Footer.astro'
 import MainContent from '@components/MainContent.astro'
 ---
 
 <AppLayout title="Home" description="Lorem index dolor sit" image="">
   <Header />
-  <div class="hero">
+  <main class="main">
     <p>Senior Software Engineer / Full Stack Developer</p>
     <h1>Non-CSE Background, Code, Curiosity, and Words.</h1>
-  </div>
-  <main class="main">
     <MainContent />
   </main>
   <!-- <Footer /> -->

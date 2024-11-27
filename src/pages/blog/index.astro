@@ -1,12 +1,13 @@
 ---
 import Header from '@components/Header.astro'
-import AppLayout from '@layout/AppLayout.astro'
+// import AppLayout from '@layout/AppLayout.astro'
+import AppLayout from '@layout/app-layout/AppLayout.astro'
+import Writing from '@components/writing/Writing.astro'
 import Footer from '@components/Footer.astro'
-import Posts from '@components/Posts.astro'
 ---
 
 <AppLayout title="Blog" description="Lorem blog dolor sit" image="">
   <Header full />
-  <Posts />
+  <Writing />
   <Footer />
 </AppLayout>

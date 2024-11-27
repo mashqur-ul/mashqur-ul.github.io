@@ -1,0 +1,19 @@
+---
+import s from './Home.module.sass'
+import Head from '@components/Head.astro'
+import Header from '@components/header/Header.astro'
+
+const { title, description, image } = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <Head title={title} description={description} image={image} />
+  </head>
+  <body>
+    <div class={s.home}>
+      <Header />
+      <slot />
+    </div>
+  </body>
+</html>

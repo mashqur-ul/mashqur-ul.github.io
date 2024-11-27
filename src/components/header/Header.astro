@@ -13,12 +13,10 @@ const { full } = Astro.props
 
 <!-- <header class={`Header${full === true ? ' Header--full' : ''}`}> -->
 <header class={s.header}>
-  <div class={s.container}>
-    <nav>
-      <a class={s.logo} href="/">Md Mashqur Ul Alam</a>
-      <Link class={s.link} href="/about">About</Link>
-      <Link class={s.link} href="/blog">Blog</Link>
-    </nav>
-    <a class={s.avatar} href="/"></a>
-  </div>
+  <nav>
+    <a class={s.logo} href="/">Md Mashqur Ul Alam</a>
+    <Link class={s.link} href="/about">About</Link>
+    <Link class={s.link} href="/blog">Blog</Link>
+  </nav>
+  <a class={s.avatar} href="/"></a>
 </header>

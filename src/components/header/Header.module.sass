@@ -1,7 +1,14 @@
 @import "@styles/_config"
 
 .header
-  background-color: rgba(blue, 0.1)
+  padding-left: percentage(60px/$frame)
+  padding-right: percentage(60px/$frame)
+  margin-left: auto
+  margin-right: auto
+  font-size: 14px
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
   nav
     display: flex
     gap: 1em
@@ -15,11 +22,6 @@
       text-decoration: none
     :global(.active)
       text-decoration: underline
-
-.container
-  display: flex
-  align-items: flex-start
-  justify-content: space-between
 
 .logo
   +reset-anchor

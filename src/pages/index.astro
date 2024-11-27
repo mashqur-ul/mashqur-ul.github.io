@@ -1,10 +1,10 @@
 ---
-import AppLayout from '@layout/app-layout/AppLayout.astro'
+import LayoutHome from '@layout/home/Home.astro'
+import Hero from '@components/hero/Hero.astro'
 import Aside from '@components/aside/Aside.astro'
 ---
 
-<AppLayout title="Home" description="Lorem index dolor sit" image="">
-  <p>Senior Software Engineer / Full Stack Developer</p>
-  <h1>Non-CSE Background, Code, Curiosity, and Words.</h1>
+<LayoutHome title="Home" description="Lorem index dolor sit" image="">
+  <Hero />
   <Aside />
-</AppLayout>
+</LayoutHome>

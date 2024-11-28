@@ -1,0 +1,29 @@
+@import '@styles/_config'
+
+.list
+  // border: 1px solid red !important
+  li
+    padding: 1.5em
+    background-color: white
+    color: $text
+    border-radius: .5em
+    h4
+      // color: rgba($text, .5) !important
+      color: inherit
+      margin-bottom: 0.4em
+      &::after
+        display: none
+
+    h5
+      color: $primary
+      font-weight: 300
+      margin-top: 1.5em
+      margin-bottom: 0
+      letter-spacing: 0.005em
+
+    &:last-child
+      background-color: #BFA15C
+      color: $text
+
+      h5
+        color: #614D20

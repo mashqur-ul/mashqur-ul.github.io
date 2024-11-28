@@ -1,9 +1,11 @@
 ---
 import s from './Aside.module.sass'
 import Tile from '@components/tile/Tile.astro'
+import Writing from '@components/writing/Writing.astro'
 import Certifications from '@components/certifications/Certifications.astro'
 import Work from '@components/work/Work.astro'
-import Writing from '@components/writing/Writing.astro'
+import Reading from '@components/reading/Reading.astro'
+import Resources from '@components/resources/Resources.astro'
 ---
 
 <aside class={s.aside}>
@@ -18,10 +20,10 @@ import Writing from '@components/writing/Writing.astro'
       <Work />
     </Tile>
     <Tile title="Reading">
-      <ol>
-        <li>image</li>
-        <li>image</li>
-      </ol>
+      <Reading />
+    </Tile>
+    <Tile title="Resources">
+      <Resources />
     </Tile>
   </div>
 </aside>

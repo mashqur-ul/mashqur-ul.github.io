@@ -1,42 +1,42 @@
-// @import "@styles/_config"
+@import "@styles/_config"
 
-// .header
-//   padding-left: percentage(60px/$frame)
-//   padding-right: percentage(60px/$frame)
-//   padding-top: 2.8em
-//   margin-left: auto
-//   margin-right: auto
-//   max-width: 40em
-//   display: flex
-//   align-items: flex-start
-//   justify-content: space-between
+.header
+  padding-left: calc(60px/$frame) * 100%
+  padding-right: calc(60px/$frame) * 100%
+  padding-top: 2.8em
+  margin-left: auto
+  margin-right: auto
+  max-width: 40em
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
 
-//   nav
-//     display: flex
-//     gap: 2em
-//     justify-items: center
-//     font-size: 14px
-//     color: rgba(black, 0.5)
-//     a
-//       text-decoration: none
-//     :global(.active)
-//       text-decoration: underline
+  nav
+    display: flex
+    gap: 2em
+    justify-items: center
+    font-size: 14px
+    color: rgba(black, 0.5)
+    a
+      text-decoration: none
+    :global(.active)
+      text-decoration: underline
 
-// .logo
-//   +reset-anchor
-//   color: $primary
-//   letter-spacing: 0.02em
-//   font-family: $family-serif
-//   margin-right: 2em
+.logo
+  +reset-anchor
+  color: $primary
+  letter-spacing: 0.02em
+  font-family: $family-serif
+  margin-right: 2em
 
-// :global(.avatar)
-//   +reset-anchor
-//   width: 60px
-//   height: 100px
-//   background-color: $primary
-//   border-radius: 50%
-//   position: fixed
-//   top: 0
-//   right: 0
-//   margin-right: percentage(60px/$frame)
-//   margin-top: 2em
+:global(.avatar)
+  +reset-anchor
+  width: 60px
+  height: 100px
+  background-color: $primary
+  border-radius: 50%
+  position: fixed
+  top: 0
+  right: 0
+  margin-right: calc(60px/$frame) * 100%
+  margin-top: 2em

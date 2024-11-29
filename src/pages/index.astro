@@ -2,9 +2,31 @@
 import LayoutHome from '@layout/home/Home.astro'
 import Hero from '@components/hero/Hero.astro'
 import Aside from '@components/aside/Aside.astro'
+import Tile from '@components/tile/Tile.astro'
+import Writing from '@components/writing/Writing.astro'
+import Certifications from '@components/certifications/Certifications.astro'
+import Work from '@components/work/Work.astro'
+import Reading from '@components/reading/Reading.astro'
+import Resources from '@components/resources/Resources.astro'
 ---
 
 <LayoutHome title="Home" description="Lorem index dolor sit" image="">
   <Hero />
-  <Aside />
+  <Aside>
+    <Tile title="Writing">
+      <Writing />
+    </Tile>
+    <Tile title="Certifications">
+      <Certifications />
+    </Tile>
+    <Tile title="Work">
+      <Work />
+    </Tile>
+    <Tile title="Reading">
+      <Reading />
+    </Tile>
+    <Tile title="Resources">
+      <Resources />
+    </Tile>
+  </Aside>
 </LayoutHome>

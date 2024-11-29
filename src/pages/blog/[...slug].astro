@@ -1,8 +1,11 @@
 ---
-import Layout from '@layout/Layout.astro'
+import s from './Post.module.sass'
+import Layout from '@layout/home/Home.astro'
 import DateFormat from '@components/DateFormat.astro'
 import ReadMore from '@components/writing/ReadMore.astro'
 import { type CollectionEntry, getCollection } from 'astro:content'
+import Hero from '@components/hero/Hero.astro'
+import Aside from '@components/aside/Aside.astro'
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog')
@@ -22,8 +25,26 @@ const { Content } = await post.render()
   description={post.data.description}
   image={post.data.heroImage}
 >
-  <h1 class="h1">{post.data.title}</h1>
-  <DateFormat date={post.data.pubDate} />
-  <Content />
-  <ReadMore slug={post.slug} />
+  <Hero />
+  <Aside>
+    <a href="/">Back</a>
+    <p>
+      <DateFormat date={post.data.pubDate} />
+    </p>
+    <h1>{post.data.title}</h1>
+    <div class={s.post}>
+      <Content />
+    </div>
+    <ReadMore slug={post.slug} />
+  </Aside>
+  <!-- <div class="hero">
+    <p>
+      <DateFormat date={post.data.pubDate} />
+    </p>
+    <h1>{post.data.title}</h1>
+  </div>
+  <div class={s.post}>
+    <Content />
+  </div>
+  <ReadMore slug={post.slug} /> -->
 </Layout>

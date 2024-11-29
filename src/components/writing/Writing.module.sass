@@ -1,4 +1,19 @@
 @import "@styles/_config"
 
-.writing
+.writing,
+.readmore
   +reset-list
+  display: flex
+  flex-direction: column
+  gap: 2em
+
+  h2,
+  p
+    +reset-all
+
+  p
+    font-size: .7em
+    color: rgba($text, 1)
+    font-weight: 400
+    margin-bottom: .5em
+    letter-spacing: 0.04em

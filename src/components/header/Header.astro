@@ -1,17 +1,7 @@
 ---
-import c from 'classnames'
 import s from './Header.module.sass'
-import Link from '@components/Link.astro'
-// import Link from './Link.astro'
-
-interface Props {
-  full?: boolean
-}
-
-const { full } = Astro.props
 ---
 
-<!-- <header class={`Header${full === true ? ' Header--full' : ''}`}> -->
 <header class={s.header}>
   <a class={s.logo} href="/">Md Mashqur Ul Alam</a>
   <a class="avatar" href="/"></a>

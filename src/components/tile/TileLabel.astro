@@ -1,0 +1,11 @@
+---
+import s from './TileLabel.module.sass'
+
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<h4 class={s.TileLabel}>{title}</h4>

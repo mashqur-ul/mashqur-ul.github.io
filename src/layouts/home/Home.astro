@@ -1,7 +1,9 @@
 ---
+import Aside from '@components/aside/Aside.astro'
 import s from './Home.module.sass'
 import Head from '@components/Head.astro'
 import Header from '@components/header/Header.astro'
+import Hero from '@components/hero/Hero.astro'
 
 const { title, description, image } = Astro.props
 ---
@@ -13,7 +15,10 @@ const { title, description, image } = Astro.props
   <body>
     <div class={s.home}>
       <Header />
-      <slot />
+      <Hero />
+      <Aside>
+        <slot />
+      </Aside>
     </div>
   </body>
 </html>

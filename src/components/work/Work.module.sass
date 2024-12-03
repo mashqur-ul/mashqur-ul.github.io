@@ -1,7 +1,28 @@
 @import "@styles/_config"
 
-.work
-  ul
-    +reset-list
-    padding-left: 1.3em
-    list-style-type: disc
+.list
+  +reset-list
+  display: flex
+  flex-direction: column
+  gap: 2.5em
+  &__item
+    p
+      +reset-list
+      font-size: .7em
+      color: rgba(white, .5)
+      font-weight: 400
+      margin-bottom: .5em
+      letter-spacing: 0.04em
+    h2
+      +reset-list
+    ul
+      +reset-list
+      padding-left: 1.3em
+      list-style-type: disc
+      margin-top: .5em
+      li
+        font-size: .7em
+        color: rgba(white, .5)
+        font-weight: 400
+        // margin-top: .5em
+        letter-spacing: 0.04em

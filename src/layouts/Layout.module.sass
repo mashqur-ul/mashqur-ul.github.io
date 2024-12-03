@@ -2,25 +2,7 @@
 
 .app
   position: relative
-  +ffs(24, 14)
+  // background-color: yellow
+  +ffs(24, 16)
   +laptop
     font-size: 2.4em
-  main
-    max-width: 40em
-    padding-left: calc(60px/$frame) * 100%
-    padding-right: calc(60px/$frame) * 100%
-    margin-left: auto
-    margin-right: auto
-    :global(.h1)
-      padding-top: 20vh
-    :global(.hero)
-      padding-top: 40vh
-      h1,
-      p
-        +reset-all
-      p
-        font-size: .7em
-        color: rgba($text, 1)
-        font-weight: 400
-        margin-bottom: 1em
-        letter-spacing: 0.04em

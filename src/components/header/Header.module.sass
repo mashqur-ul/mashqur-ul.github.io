@@ -1,6 +1,6 @@
 @import "@styles/_config"
 
-.header
+.Header
   padding-left: calc(60px/$frame) * 100%
   padding-right: calc(60px/$frame) * 100%
   padding-top: 2.8em
@@ -30,7 +30,7 @@
   font-family: $family-serif
   margin-right: 2em
 
-:global(.avatar)
+.avatar
   +reset-anchor
   width: 60px
   height: 100px
@@ -47,3 +47,17 @@
     width: 100%
     height: 100%
     object-fit: cover
+
+.HomeHeader
+  +desktop
+    width: 60%
+    max-width: 100%
+    position: fixed
+    top: 0
+    left: 0
+    padding-left: calc(50px/$frame) * 100%
+    padding-right: calc(80px/$frame) * 100%
+
+  .avatar
+    +desktop
+      right: 40%

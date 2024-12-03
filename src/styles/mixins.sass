@@ -8,6 +8,16 @@
   &:after
     clear: both
 
+// Container
+=container
+  position: relative
+  width: 100%
+  max-width: 40em
+  margin-left: auto
+  margin-right: auto
+  padding-left: calc(60px/$frame) * 100%
+  padding-right: calc(60px/$frame) * 100%
+
 // Breakpoint
 =tablet
   @media screen and (min-width: $tablet)

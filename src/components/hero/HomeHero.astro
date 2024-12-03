@@ -1,0 +1,36 @@
+---
+import s from './HomeHero.module.sass'
+import DateFormat from '@components/DateFormat.astro'
+
+const { kicker, title, linkedIn, github, resume } = Astro.props
+---
+
+<main class={s.HomeHero}>
+  <div class={s.HomeHero__container}>
+    <h2 class={s.HomeHero__kicker}>{kicker}</h2>
+    <h1 class={s.HomeHero__title}>{title}</h1>
+    <nav class={s.HomeHero__nav}>
+      {
+        linkedIn && (
+          <a class={s.HomeHero__link} href={linkedIn} target="_blank">
+            LinkedIn
+          </a>
+        )
+      }
+      {
+        github && (
+          <a class={s.HomeHero__link} href={github} target="_blank">
+            Github
+          </a>
+        )
+      }
+      {
+        resume && (
+          <a class={s.HomeHero__link} href={resume} target="_blank">
+            Resume
+          </a>
+        )
+      }
+    </nav>
+  </div>
+</main>

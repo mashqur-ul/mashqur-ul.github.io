@@ -1,8 +1,15 @@
 ---
 import s from './Header.module.sass'
+import c from 'classnames'
+
+interface Props {
+  home?: boolean
+}
+
+const { home } = Astro.props
 ---
 
-<header class={s.header}>
+<header class={c(s.Header, home && s.HomeHeader)}>
   <a class={s.logo} href="/">Md Mashqur Ul Alam</a>
-  <a class="avatar" href="/"><img src="/public/avatar.jpg" alt="" /></a>
+  <a class={s.avatar} href="/"><img src="/public/avatar.jpg" alt="" /></a>
 </header>

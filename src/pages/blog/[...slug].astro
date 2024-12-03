@@ -4,8 +4,12 @@ import Layout from '@layout/Layout.astro'
 import DateFormat from '@components/DateFormat.astro'
 import ReadMore from '@components/writing/ReadMore.astro'
 import { type CollectionEntry, getCollection } from 'astro:content'
-import Hero from '@components/hero/Hero.astro'
+import PostHero from '@components/hero/PostHero.astro'
 import Aside from '@components/aside/Aside.astro'
+import Tile from '@components/tile/Tile.astro'
+import TileHero from '@components/tile/TileHero.astro'
+import Main from '@components/main/Main.astro'
+import Footer from '@components/footer/Footer.astro'
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog')
@@ -25,26 +29,14 @@ const { Content } = await post.render()
   description={post.data.description}
   image={post.data.heroImage}
 >
-  <!-- <Hero title={post.data.title} time={post.data.pubDate} /> -->
-  <Aside>
-    <a href="/">Back</a>
-    <p>
-      <DateFormat date={post.data.pubDate} />
-    </p>
-    <h1>{post.data.title}</h1>
-    <div class={s.post}>
-      <Content />
-    </div>
-    <ReadMore slug={post.slug} />
-  </Aside>
-  <!-- <div class="hero">
-    <p>
-      <DateFormat date={post.data.pubDate} />
-    </p>
-    <h1>{post.data.title}</h1>
-  </div>
-  <div class={s.post}>
+  <PostHero
+    title={post.data.title}
+    date={post.data.pubDate}
+    image={post.data.heroImage}
+  />
+  <Main>
     <Content />
-  </div>
-  <ReadMore slug={post.slug} /> -->
+  </Main>
+  <ReadMore slug={post.slug} />
+  <!-- <Footer /> -->
 </Layout>

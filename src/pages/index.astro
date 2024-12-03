@@ -1,5 +1,6 @@
 ---
 import LayoutHome from '@layout/home/Home.astro'
+import HomeHero from '@components/hero/HomeHero.astro'
 import Aside from '@components/aside/Aside.astro'
 import Tile from '@components/tile/Tile.astro'
 import TileHero from '@components/tile/TileHero.astro'
@@ -8,14 +9,12 @@ import Certifications from '@components/certifications/Certifications.astro'
 import Work from '@components/work/Work.astro'
 import Reading from '@components/reading/Reading.astro'
 import Resources from '@components/resources/Resources.astro'
-import ReadMore from '@components/writing/ReadMore.astro'
-import Hero from '@components/hero/Hero.astro'
 import LoadFirstWriting from '@components/writing/LoadFirstWriting.astro'
 import Footer from '@components/footer/Footer.astro'
 ---
 
 <LayoutHome title="Home" description="Lorem index dolor sit" image="">
-  <Hero
+  <HomeHero
     kicker="Senior Software Engineer / Full Stack Developer"
     title="Non-CSE Background, Code, Curiosity, and Words."
     linkedIn="https://www.linkedin.com/in/md-mashqur-ul-alam/"

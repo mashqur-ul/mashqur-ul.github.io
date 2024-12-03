@@ -1,0 +1,46 @@
+@import "@styles/_config"
+
+.HomeHero
+  position: relative
+  +desktop
+    position: fixed
+    bottom: 0
+    left: 0
+    max-width: 100%
+    width: 60%
+    padding-left: calc(50px/$frame) * 100%
+    padding-right: calc(80px/$frame) * 100%
+  &__container
+    +container
+    padding-bottom: 3.5em
+    padding-top: 40vh
+    +desktop
+      padding-top: 0
+      margin-left: 0
+      padding-left: 0
+      padding-right: 0
+
+  // +desktop
+  //   position: fixed
+  //   bottom: 0
+  //   left: 0
+  //   width: 60%
+  &__kicker,
+  &__title
+    +reset-all
+
+  &__kicker
+    font-size: 1em
+    margin-bottom: 1em
+    font-weight: 300
+  &__title
+    color: $primary
+
+  &__nav
+    margin-top: 2em
+    font-size: .75em
+    font-family: $family-serif
+    display: flex
+    gap: 2em
+  &__link
+    color: $primary

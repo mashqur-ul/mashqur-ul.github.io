@@ -1,19 +1,11 @@
 @import "@styles/_config"
 
 .Tile
-  font-size: 0.833333333333333em
   padding-bottom: 6em
+  // +desktop
+  //   font-size: 0.833333333333333em
   &__container
-    display: flex
-    flex-direction: column
-    width: 100%
-    max-width: 48em
-    margin-left: auto
-    margin-right: auto
-    // padding-top: 3em
-    // padding-bottom: 3em
-    padding-left: calc(60px/$frame) * 100%
-    padding-right: calc(60px/$frame) * 100%
+    +container
     +desktop
       padding-left: 3em
       padding-right: 3em

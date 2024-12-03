@@ -1,34 +1,21 @@
 ---
 import s from './Hero.module.sass'
-import DateFormat from '@components/DateFormat.astro'
 
-const { kicker, time, title, linkedIn, github, resume } = Astro.props
+interface Props {
+  title: string
+  description: string
+  image: string
+}
+
+const { title, description, image } = Astro.props
 ---
 
-<main class={s.hero}>
-  <h2>{kicker}</h2>
-  <h1>{title}</h1>
-  <nav>
-    {
-      linkedIn && (
-        <a href={linkedIn} target="_blank">
-          LinkedIn
-        </a>
-      )
-    }
-    {
-      github && (
-        <a href={github} target="_blank">
-          Github
-        </a>
-      )
-    }
-    {
-      resume && (
-        <a href={resume} target="_blank">
-          Resume
-        </a>
-      )
-    }
-  </nav>
-</main>
+<div class={s.Hero}>
+  <div class={s.Hero__container}>
+    <h1 class={s.Hero__title}>{title}</h1>
+    <h5 class={s.Hero__description}>{description}</h5>
+  </div>
+  <div class={s.Hero__image}>
+    <img src={image} alt="" />
+  </div>
+</div>

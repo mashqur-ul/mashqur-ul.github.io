@@ -3,9 +3,10 @@
 .TileHero
   position: relative
   height: 100vh
-  font-size: 0.833333333333333em
+  +desktop
+    // border: 1px solid red
+    // font-size: 0.833333333333333em
   &__image
-    // border: 10px solid red
     position: absolute
     top: 0
     left: 0
@@ -28,19 +29,14 @@
       background-image: linear-gradient(to top, $dark, rgba(#00211E, 0) 100%)
 
   &__container
+    +container
+    z-index: 200
+    height: 100%
     display: flex
     flex-direction: column
     justify-content: space-between
-    height: 100%
-    position: relative
-    z-index: 200
-    max-width: 48em
-    margin-left: auto
-    margin-right: auto
-    padding-top: 3em
-    padding-bottom: 3em
-    padding-left: calc(60px/$frame) * 100%
-    padding-right: calc(60px/$frame) * 100%
+    padding-top: 4em
+    padding-bottom: 2.5em
     +desktop
       padding-left: 3em
       padding-right: 3em

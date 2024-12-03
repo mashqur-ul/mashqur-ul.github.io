@@ -1,8 +1,9 @@
 ---
-import s from './Reading.module.sass'
+import BookList from './BookList.astro'
+import Book from './Book.astro'
 ---
 
-<ol class={s.list}>
-  <li></li>
-  <li></li>
-</ol>
+<BookList>
+  <Book image="/public/book1.jpg" alt="Book 1" />
+  <Book image="/public/book2.jpg" alt="Book 2" />
+</BookList>

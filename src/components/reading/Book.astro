@@ -1,0 +1,16 @@
+---
+import s from './Reading.module.sass'
+
+interface Props {
+  image: string
+  alt: string
+}
+
+const { image, alt } = Astro.props
+---
+
+<li class={s.list__item}>
+  <a class={s.list__link} href="#link">
+    <img src={image} alt={alt} />
+  </a>
+</li>

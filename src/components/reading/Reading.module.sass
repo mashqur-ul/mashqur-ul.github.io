@@ -1,8 +1,13 @@
 @import '@styles/_config'
 
 .list
-  gap: 3em !important
-  li
+  +reset-list
+  display: flex
+  flex-direction: column
+  gap: 2.5em
+  &__item
+    position: relative
+    // background-color: rgba(white, 0.3)
+    // padding-bottom: calc(3/2) * 100%
+  &__link
     display: flex
-    background-color: rgba(white, 0.3)
-    padding-bottom: calc(3/2) * 100%

@@ -1,30 +1,25 @@
 ---
-import s from './Certifications.module.sass'
+import CertificateList from './CertificateList.astro'
+import Certificate from './Certificate.astro'
 ---
 
-<ol class={s.list}>
-  <li>
-    <div class={s.image}></div>
-    <h3>Certified Laravel Developer</h3>
-    <ul>
-      <li>Issue: 01/12/2020</li>
-      <li>Expire: Unknown</li>
-    </ul>
-  </li>
-  <li>
-    <div class={s.image}></div>
-    <h3>Certified Scrum Developer®</h3>
-    <ul>
-      <li>Issue: 08/21/2021</li>
-      <li>Expire: 11/09/2025</li>
-    </ul>
-  </li>
-  <li>
-    <div class={s.image}></div>
-    <h3>Certified ScrumMaster®</h3>
-    <ul>
-      <li>Issue: 01/24/2021</li>
-      <li>Expire: 11/09/2025</li>
-    </ul>
-  </li>
-</ol>
+<CertificateList>
+  <Certificate
+    title="Certified Laravel Developer"
+    issueDate="01/12/2020"
+    expireDate="Unknown"
+    image="/public/certified-laravel-developer.png"
+  />
+  <Certificate
+    title="Certified Scrum Developer®"
+    issueDate="08/21/2021"
+    expireDate="11/09/2025"
+    image="/public/certified-scrum-developer.png"
+  />
+  <Certificate
+    title="Certified ScrumMaster®"
+    issueDate="01/24/2021"
+    expireDate="11/09/2025"
+    image="/public/certified-scrum-master.png"
+  />
+</CertificateList>

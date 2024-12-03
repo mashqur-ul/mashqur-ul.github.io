@@ -1,17 +1,31 @@
 @import "@styles/_config"
 
 .list
-  // gap: 2em !important
-  > li
-    position: relative
-    padding-left: 5.5em
-  ul
-    +reset-list
+  +reset-list
+  display: flex
+  flex-direction: column
+  gap: 2em
+  &__item
+    display: flex
+    align-items: flex-start
 
-.image
-  width: 4em
-  height: 4em
-  background-color: rgba(white, 0.2)
-  position: absolute
-  top: 0
-  left: 0
+  &__image
+    width: 4em
+    display: flex
+    margin-right: 1.5em
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain
+
+  &__content
+    ul
+      +reset-list
+      font-size: 0.7em
+      color: rgba(white, .5)
+      font-weight: 400
+      margin-top: .5em
+
+    h3
+      +reset-all
+      padding-right: 2em

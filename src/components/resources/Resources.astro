@@ -1,27 +1,26 @@
 ---
+import ResourceList from './ResourceList.astro'
+import ResourceLink from './ResourceLink.astro'
 import s from './Resources.module.sass'
 ---
 
-<ol class={s.list}>
-  <li>
-    <a href="mailto:mashqurulalam@gmail.com">
-      <h4>Need more?</h4>
-      <h2>I can share more on request</h2>
-      <h5>Send request</h5>
-    </a>
-  </li>
-  <li>
-    <a href="/resources">
-      <h4>Need development advice?</h4>
-      <h2>Quick reads and blogs</h2>
-      <h5>View resources</h5>
-    </a>
-  </li>
-  <li>
-    <a href="mailto:mashqurulalam@gmail.com">
-      <h4>Stuck in something?</h4>
-      <h2>I’m here let’s discuss</h2>
-      <h5>Knock me</h5>
-    </a>
-  </li>
-</ol>
+<ResourceList>
+  <ResourceLink
+    href="mailto:mashqurulalam@gmail.com"
+    kicker="Need more?"
+    title="I can share more on request"
+    action="Send request"
+  />
+  <ResourceLink
+    href="resources"
+    kicker="Need development advice?"
+    title="Quick reads and blogs"
+    action="View resources"
+  />
+  <ResourceLink
+    href="mailto:mashqurulalam@gmail.com"
+    kicker="Stuck in something?"
+    title="I’m here let’s discuss"
+    action="Knock me"
+  />
+</ResourceList>

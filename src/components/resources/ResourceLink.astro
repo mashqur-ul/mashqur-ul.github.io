@@ -1,0 +1,20 @@
+---
+import s from './Resources.module.sass'
+
+interface Props {
+  href: string
+  kicker: string
+  title: string
+  action: string
+}
+
+const { href, kicker, title, action } = Astro.props
+---
+
+<li class={s.list__item}>
+  <a class={s.list__link} href={href}>
+    <h4 class={s.list__kicker}>{kicker}</h4>
+    <h2 class={s.list__title}>{title}</h2>
+    <h5 class={s.list__action}>{action}</h5>
+  </a>
+</li>

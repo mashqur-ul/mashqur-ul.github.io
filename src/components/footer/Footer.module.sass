@@ -1,0 +1,59 @@
+@import "@styles/_config"
+
+.Footer
+  font-size: 0.833333333333333em
+  padding-top: 6em
+  display: flex
+  flex-direction: column
+  width: 100%
+  height: 40vh
+  max-width: 48em
+  margin-left: auto
+  margin-right: auto
+  // padding-top: 3em
+  // padding-bottom: 3em
+  padding-left: calc(60px/$frame) * 100%
+  padding-right: calc(60px/$frame) * 100%
+  +desktop
+    padding-left: 3em
+    padding-right: 3em
+  &__wrapper
+    position: relative
+    background-color: white
+    color: $dark
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: space-between
+    height: 100%
+    padding: 3em 3em 2em
+  &__top
+    display: flex
+    width: 100%
+    justify-content: space-between
+    // padding-bottom: 6em
+  &__bottom
+
+  // style
+  &__logo
+    +reset-anchor
+    color: $primary
+    letter-spacing: 0.02em
+    font-size: 0.75em
+    font-family: $family-serif
+    margin-right: 2em
+  &__avatar
+    +reset-anchor
+    width: 3em
+    height: 5em
+    background-color: rgba(black, 0.1)
+    border-radius: 50%
+    overflow: hidden
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  &__copy
+    +reset-all
+    font-size: 0.75em

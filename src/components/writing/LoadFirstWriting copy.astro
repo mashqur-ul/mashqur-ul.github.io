@@ -1,0 +1,26 @@
+---
+import s from './Writing.module.sass'
+import { getCollection, type CollectionEntry } from 'astro:content'
+import DateFormat from '@components/DateFormat.astro'
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+)
+// console.log(posts[0])
+let post = posts[0]
+---
+
+<ol class={s.writing}>
+  {
+    (
+      <li>
+        <a href={`/blog/${post.slug}`}>
+          <p>
+            <DateFormat date={post.data.pubDate} />
+          </p>
+          <h2>{post.data.title}</h2>
+        </a>
+      </li>
+    )
+  }
+</ol>

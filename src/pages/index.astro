@@ -9,23 +9,36 @@ import Work from '@components/work/Work.astro'
 import Reading from '@components/reading/Reading.astro'
 import Resources from '@components/resources/Resources.astro'
 import ReadMore from '@components/writing/ReadMore.astro'
+import Hero from '@components/hero/Hero.astro'
+import LoadFirstWriting from '@components/writing/LoadFirstWriting.astro'
 ---
 
 <LayoutHome title="Home" description="Lorem index dolor sit" image="">
-  <TileHero title="Resources" />
-  <Tile title="Writing">
-    <Writing />
-  </Tile>
-  <Tile title="Certifications">
-    <Certifications />
-  </Tile>
-  <Tile title="Work">
-    <Work />
-  </Tile>
-  <Tile title="Reading">
-    <Reading />
-  </Tile>
-  <Tile title="Resources">
-    <Resources />
-  </Tile>
+  <Hero
+    kicker="Senior Software Engineer / Full Stack Developer"
+    title="Non-CSE Background, Code, Curiosity, and Words."
+    linkedIn="https://www.linkedin.com/in/md-mashqur-ul-alam/"
+    github="https://github.com/mashqur-ul"
+    resume="/resume"
+  />
+  <Aside>
+    <TileHero image="/foggy-forest.jpg" title="Writing">
+      <LoadFirstWriting />
+    </TileHero>
+    <Tile>
+      <Writing />
+    </Tile>
+    <Tile title="Certifications">
+      <Certifications />
+    </Tile>
+    <Tile title="Work">
+      <Work />
+    </Tile>
+    <Tile title="Reading">
+      <Reading />
+    </Tile>
+    <Tile title="Resources">
+      <Resources />
+    </Tile>
+  </Aside>
 </LayoutHome>

@@ -3,13 +3,15 @@ import s from './Tile.module.sass'
 import TileLabel from './TileLabel.astro'
 
 interface Props {
-  title: string
+  title?: string
 }
 
 const { title } = Astro.props
 ---
 
-<div class={s.tile}>
-  <TileLabel title="Resource" />
-  <slot />
+<div class={s.Tile}>
+  <div class={s.Tile__container}>
+    {title && <TileLabel title={title} />}
+    <slot />
+  </div>
 </div>

@@ -1,6 +1,6 @@
 ---
 import s from './Post.module.sass'
-import Layout from '@layout/home/Home.astro'
+import Layout from '@layout/Layout.astro'
 import DateFormat from '@components/DateFormat.astro'
 import ReadMore from '@components/writing/ReadMore.astro'
 import { type CollectionEntry, getCollection } from 'astro:content'
@@ -25,7 +25,7 @@ const { Content } = await post.render()
   description={post.data.description}
   image={post.data.heroImage}
 >
-  <Hero />
+  <!-- <Hero title={post.data.title} time={post.data.pubDate} /> -->
   <Aside>
     <a href="/">Back</a>
     <p>

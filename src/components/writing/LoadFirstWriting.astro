@@ -10,11 +10,11 @@ const posts = (await getCollection('blog')).sort(
 let post = posts[0]
 ---
 
-<ol class={s.writing}>
+<div class={s.writing}>
   <a href={`/blog/${post.slug}`}>
     <p>
       <DateFormat date={post.data.pubDate} />
     </p>
     <h2>{post.data.title}</h2>
   </a>
-</ol>
+</div>

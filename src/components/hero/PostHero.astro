@@ -1,7 +1,7 @@
 ---
+import { Image } from 'astro:assets'
 import DateFormat from '@components/DateFormat.astro'
 import s from './PostHero.module.sass'
-import TileHero from '@components/tile/TileHero.astro'
 
 const { title, date, image } = Astro.props
 ---
@@ -12,6 +12,6 @@ const { title, date, image } = Astro.props
     <p class={s.PostHero__date}><DateFormat date={date} /></p>
   </div>
   <div class={s.PostHero__image}>
-    <img src={image} alt="" />
+    <Image src={image} alt="Lorem ipsum" width={2400} height={1600} />
   </div>
 </div>

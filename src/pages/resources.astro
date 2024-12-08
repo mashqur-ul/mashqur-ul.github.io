@@ -8,14 +8,25 @@ import List from '@components/list/List.astro'
 import ListLink from '@components/list/ListLink.astro'
 import Main from '@components/main/Main.astro'
 import TileLabel from '@components/tile/TileLabel.astro'
+import { Image } from 'astro:assets'
+
+import foggyForest from '@assets/foggy-forest.jpg'
 ---
 
 <Layout title="Resources" description="Lorem index dolor sit" image="">
   <Hero
     title="Dev Resources"
     description="Lorem index dolor sit"
-    image="/public/foggy-forest.jpg"
+    image="/foggy-forest.jpg"
   />
+  <!-- <Image
+    src={foggyForest}
+    alt="Lorem ipsum"
+    width={1152}
+    height={1620}
+    format="avif"
+  /> -->
+  <!-- <Image src="/foggy-forest.jpg" alt="Lorem ipsum" width={1152} height={1620} /> -->
   <Main>
     <TileLabel title="Quick Reading" />
     <List>

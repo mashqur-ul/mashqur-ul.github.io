@@ -1,8 +1,8 @@
 ---
 import s from './Writing.module.sass'
-import { getCollection, type CollectionEntry } from 'astro:content'
 import DateFormat from '@components/DateFormat.astro'
 import Tile from '@components/tile/Tile.astro'
+import { getCollection, type CollectionEntry } from 'astro:content'
 
 const { slug } = Astro.props
 
@@ -11,19 +11,21 @@ const posts = (await getCollection('blog'))
   .filter((post: CollectionEntry<'blog'>) => post.slug != slug)
 ---
 
-<Tile title="More writing">
-  <ul class={s.writing}>
-    {
-      posts.map((post) => (
-        <li>
-          <a href={`/blog/${post.slug}/`}>
-            <p>
-              <DateFormat date={post.data.pubDate} />
-            </p>
-            <h2>{post.data.title}</h2>
-          </a>
-        </li>
-      ))
-    }
-  </ul>
-</Tile>
+<div class={s.ReadMore}>
+  <Tile title="More writing">
+    <ul class={s.writing}>
+      {
+        posts.map((post) => (
+          <li>
+            <a href={`/blog/${post.slug}/`}>
+              <p>
+                <DateFormat date={post.data.pubDate} />
+              </p>
+              <h2>{post.data.title}</h2>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </Tile>
+</div>

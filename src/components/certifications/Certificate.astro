@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 import DateFormat from '@components/DateFormat.astro'
 import s from './Certifications.module.sass'
 
@@ -16,7 +17,7 @@ const { title, image, issueDate, expireDate } = Astro.props
 
 <li class={s.list__item}>
   <div class={s.list__image}>
-    <img src={image} />
+    <Image src={image} alt="Certification" width={300} height={300} />
   </div>
   <div class={s.list__content}>
     <h3>{title}</h3>

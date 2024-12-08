@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 import s from './TileHero.module.sass'
 import TileLabel from './TileLabel.astro'
 
@@ -12,7 +13,7 @@ const { title, image } = Astro.props
 
 <div class={s.TileHero}>
   <div class={s.TileHero__image}>
-    <img src={image} />
+    <Image src={image} alt="Lorem ipsum hello" width={1152} height={1620} />
   </div>
   <div class={s.TileHero__container}>
     <svg
